@@ -1,0 +1,10 @@
+name: sample_workflow
+on: workflow_dispatch
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printing statement
+        run: echo "Hello Everyone, Good Morning!"
+      - name: Printing statement 2
+        run: echo "You are learning Githus-Actions"
