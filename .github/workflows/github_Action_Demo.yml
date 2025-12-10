@@ -4,7 +4,14 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Printing statement
+      - name: Printing statement 1
         run: echo "Hello Everyone, Good Morning!"
       - name: Printing statement 2
         run: echo "You are learning Githus-Actions"
+  second-job:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: statement 3
+        run: echo "Hello Everyone, Good Morning! This is the 3rd statement"
+      - name: statement 4
+        run: echo "This is 4th statement"
