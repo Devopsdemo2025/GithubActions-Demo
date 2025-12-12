@@ -6,6 +6,8 @@ jobs:
     env:
       GREETING: Hello Everyone, Good Afternoon!
       LEARNING: learning GitHub-Actions
+    environment: 
+      name: PROD
     steps:
       - name: Printing statement 1
         run: echo "$GREETING"
