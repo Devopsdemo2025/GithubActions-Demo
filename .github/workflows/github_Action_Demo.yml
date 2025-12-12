@@ -3,8 +3,9 @@ on: workflow_dispatch
 jobs:
   first-job:
     runs-on: ubuntu-latest
-    GREETING: Hello Everyone, Good Afternoon!
-    LEARNING: earning GitHub-Actions
+    env:
+      GREETING: Hello Everyone, Good Afternoon!
+      LEARNING: learning GitHub-Actions
     steps:
       - name: Printing statement 1
         run: echo "$GREETING"
