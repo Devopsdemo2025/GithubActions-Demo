@@ -3,15 +3,25 @@ on: workflow_dispatch
 jobs:
   first-job:
     runs-on: ubuntu-latest
+    GREETING: Hello Everyone, Good Afternoon!
+    LEARNING: earning GitHub-Actions
     steps:
       - name: Printing statement 1
-        run: echo "Hello Everyone, Good Morning!"
+        run: echo "$GREETING"
       - name: Printing statement 2
-        run: echo "You are learning Githus-Actions"
+        run: echo "$LEARNING"
+      - name: Printing statement 2
+        env:
+          LEARNING: "Step-level override: Learning CI/CD"
+        run: echo "$LEARNING"
   second-job:
     runs-on: ubuntu-24.04
+    env:
+      MSG3: Hello Everyone, Good Afternoon! This is the 3rd statement
     steps:
       - name: statement 3
-        run: echo "Hello Everyone, Good Morning! This is the 3rd statement"
+        run: echo "$MSG3"
       - name: statement 4
-        run: echo "This is 4th statement"
+        env:
+          MSG4: This is 4th statement
+        run: echo "$MSG4"
